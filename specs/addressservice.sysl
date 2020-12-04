@@ -1,0 +1,13 @@
+import addressdirectory.sysl 
+addressservice "addressservice":
+    @package="addressservice"
+    /address-check:
+        GET:
+            | Get address details
+            addressdirectory <- GET /address
+            return ok <: Address
+
+    !type Address:
+        street <: string
+        country <: string
+        pinCode <: string

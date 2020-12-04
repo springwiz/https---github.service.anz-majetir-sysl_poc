@@ -1,0 +1,10 @@
+addressdirectory "addressdirectory":
+    @package="addressdirectory"
+    /address:
+            GET:
+                return ok <: Address
+
+    !type Address:
+        street  <: string
+        country <: string
+        pinCode <: string
